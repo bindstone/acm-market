@@ -1,0 +1,26 @@
+version: '3'
+services:
+  acm-exchange:
+    container_name: acm-exchange
+    build: ./exchange/
+    ports:
+      - "8081:8081"
+    networks:
+      - acm-net
+  acm-market:
+    container_name: acm-market
+    build: ./market/
+    ports:
+      - "8080:8080"
+    networks:
+      - acm-net
+  acm-market-web:
+    container_name: acm-market-web
+    build: ./market-web/
+    ports:
+      - "80:80"
+    networks:
+      - acm-net
+networks:
+  acm-net:
+    driver: bridge

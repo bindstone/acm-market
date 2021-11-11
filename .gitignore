@@ -1,0 +1,22 @@
+# IDE
+*.iml
+.idea
+exchange/.idea
+market/.idea
+market-web/.idea
+
+# JAVA
+exchange/target
+market/target
+
+# H2 Database
+exchange/h2
+market/h2
+h2
+
+# NODES/ANGULAR
+market-web/node_modules
+market-web/dist
+
+# OTHER
+/readme.pdf

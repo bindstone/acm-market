@@ -1,0 +1,27 @@
+### GET all Currencies
+GET http://127.0.0.1:8081/api/v1/exchange/
+Accept: application/json
+
+### GET single Currency
+GET http://127.0.0.1:8081/api/v1/exchange/USD/
+Accept: application/json
+
+### GET unknown Currency
+GET http://127.0.0.1:8081/api/v1/exchange/FYI/
+Accept: application/json
+
+### Calculate Exchange
+GET http://127.0.0.1:8081/api/v1/exchange/USD/calculate/33.4
+Accept: application/json
+
+### Calculate Exchange
+GET http://127.0.0.1:8081/api/v1/exchange/FYI/calculate/33.4
+Accept: application/json
+
+### Swagger (JSON)
+GET http://127.0.0.1:8081/v3/api-docs
+Accept: application/json
+
+### Swagger-UI
+GET http://127.0.0.1:8081/swagger-ui.html
+Accept: application/json

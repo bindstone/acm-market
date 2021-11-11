@@ -1,0 +1,170 @@
+include::readme.adoc[]
+
+<<<
+
+== Code Module Exchange
+
+Entity (ExchangeRate.java)
+[source,java]
+----
+include::exchange/src/main/java/com/bindstone/acm/exchange/entity/ExchangeRate.java[tag=asciidoc]
+----
+
+Repository (ExchangeRateRepository.java)
+[source,java]
+----
+include::exchange/src/main/java/com/bindstone/acm/exchange/repository/ExchangeRateRepository.java[tag=asciidoc]
+----
+
+Service (ExchangeRateServiceImpl.java)
+[source,java]
+----
+include::exchange/src/main/java/com/bindstone/acm/exchange/service/impl/ExchangeRateServiceImpl.java[tag=asciidoc]
+----
+
+Rest Controller (ExchangeRateController.java, RestExceptionHandler.java)
+[source,java]
+----
+include::exchange/src/main/java/com/bindstone/acm/exchange/controller/ExchangeRateController.java[tag=asciidoc]
+----
+
+Rest Exception Handler (RestControllerAdvice)
+[source,java]
+----
+include::exchange/src/main/java/com/bindstone/acm/exchange/controller/RestExceptionHandler.java[tag=asciidoc]
+----
+
+Configuration (application.properties)
+[source,properties]
+----
+include::exchange/src/main/resources/application-dev.properties[]
+----
+
+Flyway DB Scripts
+[source,sql]
+----
+include::exchange/src/main/resources/db/migration/V1_0_0__database_schema.sql[]
+----
+
+Unit Test
+[source,java]
+----
+include::exchange/src/test/java/com/bindstone/acm/exchange/service/ExchangeRangeServiceTest.java[tag=asciidoc]
+----
+
+== Code Module market
+
+Entity (ExchangeRate.java)
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/entity/Product.java[tag=asciidoc]
+----
+
+Repository (ProductRepository.java)
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/repository/ProductRepository.java[tag=asciidoc]
+----
+
+Service(CurrencyRestServiceImpl.java, ProductServiceImpl.java)
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/service/impl/CurrencyRestServiceImpl.java[tag=asciidoc]
+----
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/service/impl/ProductServiceImpl.java[tag=asciidoc]
+----
+
+DTO Mapper
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/dto/entity/ProductDto.java[tag=asciidoc]
+----
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/dto/ProductMapper.java[tag=asciidoc]
+----
+
+Rest Controller (ProductController.java, RestExceptionHandler.java)
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/controller/ProductController.java[tag=asciidoc]
+----
+[source,java]
+----
+include::market/src/main/java/com/bindstone/acm/market/controller/RestExceptionHandler.java[tag=asciidoc]
+----
+
+Configuration (application.properties)
+[source,properties]
+----
+include::market/src/main/resources/application-dev.properties[]
+----
+
+Flyway DB Scripts
+[source,sql]
+----
+include::market/src/main/resources/db/migration/V1_0_0__database_schema.sql[]
+----
+
+
+Unit Test
+[source,java]
+----
+include::market/src/test/java/com/bindstone/acm/market/service/ProductServiceTest.java[tag=asciidoc]
+----
+
+== Code Module market-web
+
+app.module.ts
+[source,typescript]
+----
+include::market-web/src/app/app.module.ts[]
+----
+
+Service (currency.service.ts, product-service.ts)
+[source,typescript]
+----
+include::market-web/src/app/service/currency.service.ts[tag=asciidoc]
+----
+[source,typescript]
+----
+include::market-web/src/app/service/product-service.ts[tag=asciidoc]
+----
+
+Component (home-page)
+[source,typescript]
+----
+include::market-web/src/app/component/home-page/home-page.component.ts[tag=asciidoc]
+----
+[source,html]
+----
+include::market-web/src/app/component/home-page/home-page.component.html[]
+----
+
+Component (product-dialog)
+[source,typescript]
+----
+include::market-web/src/app/component/product-dialog/product-dialog.component.ts[tag=asciidoc]
+----
+[source,html]
+----
+include::market-web/src/app/component/product-dialog/product-dialog.component.html[]
+----
+
+Component (product-table)
+[source,typescript]
+----
+include::market-web/src/app/component/product-table/product-table.component.ts[tag=asciidoc]
+----
+[source,html]
+----
+include::market-web/src/app/component/product-table/product-table.component.html[]
+----
+
+Component (notification)
+[source,typescript]
+----
+include::market-web/src/app/component/notification/notification.component.ts[tag=asciidoc]
+----
