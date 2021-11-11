@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>{{data ? 'Update product' : 'Add new product'}}</h2>
+<form (ngSubmit)="submit(productForm)" [formGroup]="productForm">
+  <mat-dialog-content>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Product name</mat-label>
+        <input formControlName="name" matInput required type="text"/>
+        <mat-error *ngIf="(productForm.get('name')?.errors?.required)">Field is required</mat-error>
+        <mat-error *ngIf="(productForm.get('name')?.errors?.minlength)">Please at least 2 chars</mat-error>
+        <mat-error *ngIf="(productForm.get('name')?.errors?.maxlength)">Please not more than 200 chars</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input formControlName="price" matInput required step="0.01" type="number"/>
+        <mat-error *ngIf="(productForm.get('price')?.errors?.required)">Field is required</mat-error>
+        <mat-error *ngIf="(productForm.get('price')?.errors?.min)">Price must be greater than 0</mat-error>
+        <mat-error *ngIf="(productForm.get('price')?.errors?.max)">Price must be less than 5000</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Currency (Price)</mat-label>
+        <mat-select formControlName="currency" required>
+          <mat-option *ngFor="let ccy of currencies" [value]="ccy">
+            {{ccy}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="(productForm.get('currency')?.errors?.required)">Field is required</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button [disabled]="!productForm.valid" color="primary" mat-button
+            type="submit">{{data ? 'Update' : 'Add'}}</button>
+  </mat-dialog-actions>
+</form>

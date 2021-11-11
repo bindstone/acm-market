@@ -1,0 +1,24 @@
+.add-button {
+  margin-left: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.add-button-icon {
+  margin-left: 10px;
+}
+
+.product-container {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.product-title {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  display: inline-block;
+}

@@ -1,0 +1,30 @@
+.product-list-div {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  width: 80%;
+}
+
+.icon-button {
+  margin-left: 5px;
+}
+
+.mat-column-name {
+  flex: auto;
+}
+
+.mat-column-type {
+  flex: auto;
+}
+
+.mat-column-action {
+  width: 120px;
+}
+
+table {
+  width: 100%;
+}

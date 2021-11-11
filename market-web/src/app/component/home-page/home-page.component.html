@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <span>ACM Market</span>
+</mat-toolbar>
+
+<div class="product-container">
+  <div>
+    <div class="product-title">
+      <h1 class="title">Current Product List</h1>
+      <button (click)="addProduct()" class="add-button" color="primary" mat-stroked-button>
+        Add new product
+        <mat-icon class="add-button-icon">add_circle</mat-icon>
+      </button>
+    </div>
+    <app-product-table></app-product-table>
+  </div>
+</div>
